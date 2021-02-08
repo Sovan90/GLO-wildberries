@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--чтоб растягивал-->
+    <title>Wildberries</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <header class="container header px-4 px-md-0">
+      <!--px-4 px-md-0 на маленьких отступ, на средн и больше отключить-->
+      <!-- добавили свой класс header после того, как после box-sizing: border-box в css скукожилась шапка-->
+      <div class="row justify-content-between align-items-center">
+        <!--чтоб в строчку+выравнивание по вертикали по центру+расстояние между элементами,  (см. justify в док-ции)-->
+        <div class="col-lg-2 col-6">
+          <!--первые 2 колонки-->
+          <a href="/" class="logo-link">
+            <img
+              width="128"
+              src="img/logo.svg"
+              alt="logo: Wildberries"
+              class="logo-image"
+            />
+          </a>
+        </div>
+        <div class="col-lg-6 d-none d-lg-block">
+          <!--след 6 колонок-->
+          <nav>
+            <ul class="navigation d-flex justify-content-between">
+              <!--класс bootstrap'а чтоб в строчку растянуть элементы списка и +расстояние между элементами,  (см. justify в док-ции) -->
+              <li class="navigation-item">
+                <a href="#" class="navigation-link">Womens</a>
+              </li>
+              <li class="navigation-item">
+                <a href="#" class="navigation-link">Mens</a>
+              </li>
+              <li class="navigation-item">
+                <a href="#" class="navigation-link">Goods</a>
+              </li>
+              <li class="navigation-item">
+                <a href="#" class="navigation-link">Accessories</a>
+              </li>
+              <li class="navigation-item">
+                <a href="#" class="navigation-link">Brands</a>
+              </li>
+              <li class="navigation-item">
+                <a href="#" class="navigation-link">Blog</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="col-lg-2 col-6 d-flex justify-content-end">
+          <!--добавил класс justify, что выравнить справа-->
+          <button class="button">
+            <img class="button-icon" src="img/cart.svg" alt="icon: cart" />
+            <span class="button-text">Cart</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!--Второй урок-->
+    <!--Теперь пишем слайдер!-->
+    <div class="slider swiper-container">
+      <!--урок 4 присвоили доп класс-->
+      <div class="swiper-wrapper">
+        <section class="slide slide-1 swiper-slide">
+          <!--Все слайды имеют один стиль. Но это слайд 1. Поэтому добавляем slide-1-->
+          <!--Урок 4. Прикручиваем swiper-slide для каждого слайда-->
+          <div class="container">
+            <div class="row">
+              <!--как строка типо чтоб-->
+              <div class="col-lg-4 col-10 offset-lg-1">
+                <!--/.col-4 - будет занимать 4 колонки из 12-->
+                <!-- offset-lg-1 - будет справа отступать 1 на одну колонку-->
+                <span class="label">Bestseller</span>
+                <!--span для текста. Строчный, чтоб назначать класс для куска, внутри <p> например-->
+                <h2 class="slide-title">Sweater Choker Neck</h2>
+                <p class="slide-description">
+                  Women’s pearl basic knit sweater with a round neck. Available
+                  in several colours. Free shipping to stores.
+                </p>
+                <!--Добавил заголовок и описание-->
+                <button class="button">
+                  <span class="button-price">$319</span>
+                  <span class="button-text">Shop now</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="slide slide-2 swiper-slide">
+          <!--Все слайды имеют один стиль. Но это слайд 1. Поэтому добавляем slide-1-->
+          <!--Урок 4. Прикручиваем swiper-slide для каждого слайда-->
+          <div class="container">
+            <div class="row">
+              <!--как строка типо чтоб-->
+              <div class="col-lg-4 col-10 offset-lg-1">
+                <!--/.col-4 - будет занимать 4 колонки из 12-->
+                <!-- offset-lg-1 - будет справа отступать 1 на одну колонку-->
+                <span class="label">New</span>
+                <!--span для текста. Строчный, чтоб назначать класс для куска, внутри <p> например-->
+                <h2 class="slide-title">Text T-Shirt</h2>
+                <p class="slide-description">
+                  Women’s pearl basic knit sweater with a round neck. Available
+                  in several colours. Free shipping to stores.
+                </p>
+                <!--Добавил заголовок и описание-->
+                <button class="button">
+                  <span class="button-price">$319</span>
+                  <span class="button-text">Shop now</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="slide slide-1 swiper-slide">
+          <!--Все слайды имеют один стиль. Но это слайд 1. Поэтому добавляем slide-1-->
+          <!--Урок 4. Прикручиваем swiper-slide для каждого слайда-->
+          <div class="container">
+            <div class="row">
+              <!--как строка типо чтоб-->
+              <div class="col-lg-4 col-10 offset-lg-1">
+                <!--col-lg-4 col-10 это добавил, чтоб изменить для мал. экранов-->
+                <!--/.col-4 - будет занимать 4 колонки из 12-->
+                <!-- offset-lg-1 - будет справа отступать 1 на одну колонку-->
+                <span class="label">Bestseller</span>
+                <!--span для текста. Строчный, чтоб назначать класс для куска, внутри <p> например-->
+                <h2 class="slide-title">Sweater Choker Neck</h2>
+                <p class="slide-description">
+                  Women’s pearl basic knit sweater with a round neck. Available
+                  in several colours. Free shipping to stores.
+                </p>
+                <!--Добавил заголовок и описание-->
+                <button class="button">
+                  <span class="button-price">$319</span>
+                  <span class="button-text">Shop now</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <!-- /.swiper-wrapper -->
+
+      <!--Пошел конпки навигации по слайдам делать-->
+      <div class="slider-nav">
+        <div class="container">
+          <div class="row justify-content-between">
+            <!--кнопка слева-->
+            <div class="col-1">
+              <button class="slider-button slider-button-prev">
+                <img src="img/arrow-prev.svg" alt="icon: arrow-prev" />
+              </button>
+            </div>
+
+            <!--кнопка справа-->
+            <div class="col-1">
+              <button class="slider-button slider-button-next">
+                <img src="img/arrow-next.svg" alt="icon: arrow-next" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /.slider-nav -->
+    </div>
+    <!--/.slider -->
+
+    <!--Урок 3-->
+    <!--Создаём контейнер, строку и в ней кучу подконтейнеров с определённым кол-вом колонок. См. сколько в карточках в фигме.-->
+    <div class="container pt-5 pb-4">
+      <!--pt-5 готовый класс бутстрапа. Отступ сверху 5 rem.-->
+      <div class="row mb-4">
+        <!-- bootstrap'овская тема. Отталкиваем снизу всё на 4 ед. -->
+        <div class="col-xl-6">
+          <!--first card-->
+          <div class="card card-1 mb-4">
+            <!--В уроке он добавлял здесь mb-4. Типо бутстраповский отступ.-->
+            <!--тут присвоил первой карточке класс card-1-->
+            <h3 class="card-title">Fashion Month Ready in Capital Shop</h3>
+            <p class="card-text">
+              Bags & Acsessories & Lingerie & Sportswear & Beauty & Swimwear
+            </p>
+            <button class="button">
+              <span class="button-text">View all</span>
+              <img src="img/Arrow.svg" alt="icon: arrow" class="button-icon" />
+            </button>
+          </div>
+        </div>
+        <div class="col-xl-6">
+          <!--second card-->
+          <div class="card card-2 mb-4">
+            <!--В уроке он добавлял здесь mb-4. Типо бутстраповский отступ. Я сделал через css-->
+            <!--тут присвоил второй карточке класс card-2-->
+            <h3 class="card-title text-light">
+              Catch the Sun: Spring Break Styles From $5.99
+            </h3>
+
+            <p class="card-text text-light-2">
+              Sweaters & Hoodies & Puffer Jackets & Coats and Jackets & Knit
+            </p>
+            <button class="button">
+              <span class="button-text">View all</span>
+              <img src="img/Arrow.svg" alt="icon: arrow" class="button-icon" />
+            </button>
+          </div>
+        </div>
+        <!-- /.col-6 -->
+
+        <div class="col-xl-9 col-lg-6">
+          <!--THIRD card-->
+          <div class="card card-3 mb-4">
+            <!--тут присвоил третей карточке класс card-3-->
+            <span class="label">Bestseller</span>
+            <!--добавили лэйбл-->
+            <h3 class="card-title large">
+              <!--тут добавили класс large, чтоб текст был больше-->
+              Poplin Top <br />
+              With Sleeve Bow
+            </h3>
+
+            <p class="card-text large">
+              Poplin top with roll neckline, long sleeves
+            </p>
+            <!--Кнопку с ценником уже делали. Копируем сюда-->
+            <button class="button">
+              <span class="button-price">$129</span>
+              <span class="button-text">Shop now</span>
+            </button>
+          </div>
+          <!--/.card-->
+        </div>
+
+        <!-- /.col-9 col-3 -->
+        <div class="col-xl-3 col-lg-6">
+          <!--4 card-->
+          <div class="card card-4">
+            <!--тут присвоил четвертой карточке класс card-4-->
+
+            <h3 class="card-title title-4 text-light">
+              <!--тут добавили класс large, чтоб текст был больше-->
+              Printed Shirt <br />
+              with a Bow
+            </h3>
+
+            <p class="card-text text-4 text-light-2">Pink/Sky Blue/Yellow</p>
+            <span class="card-price">$129</span>
+          </div>
+        </div>
+      </div>
+      <div class="row align-items-center mb-4">
+        <!--mb-4 отодвинули заголовок от карточек на 4 рем-->
+        <div class="col-9">
+          <h2 class="section-title">New Arrival</h2>
+        </div>
+        <!-- /.col-9 -->
+        <div class="col-3 d-flex justify-content-end">
+          <!-- Чтобы ссылка улетела вправо-->
+          <a class="more" href="#">View All</a>
+        </div>
+        <!-- /.col-3 -->
+      </div>
+      <!-- /.row -->
+      <div class="row">
+        <!--.col-3*4>.goods-card>span.label{New}+img.goods-image+h3.goods-title+p.goods-description+span.goods-price-->
+        <div class="col-lg-3 col-sm-6">
+          <div class="goods-card">
+            <span class="label">New</span>
+            <!-- /.label --><img
+              src="img/image-119.jpg"
+              alt="image: Hoodie"
+              class="goods-image"
+            />
+            <h3 class="goods-title">Embroidered Hoodie</h3>
+            <!-- /.goods-title -->
+            <p class="goods-description">Yellow/Lilac/Fuchsia/Orange</p>
+            <!-- /.goods-description -->
+            <span class="goods-price">$89</span>
+            <!-- /.goods-price -->
+          </div>
+          <!-- /.goods-card -->
+        </div>
+        <!-- /.col-3 -->
+        <div class="col-lg-3 col-sm-6">
+          <div class="goods-card">
+            <span class="label">New</span>
+            <!-- /.label --><img
+              src="img/image-120.jpg"
+              alt="image: Trousers"
+              class="goods-image"
+            />
+            <h3 class="goods-title">Faded Beach Trousers</h3>
+            <!-- /.goods-title -->
+            <p class="goods-description">Navy/Ochre/Black/Khaki</p>
+            <!-- /.goods-description -->
+            <span class="goods-price">$139</span>
+            <!-- /.goods-price -->
+          </div>
+          <!-- /.goods-card -->
+        </div>
+        <!-- /.col-3 -->
+        <div class="col-lg-3 col-sm-6">
+          <div class="goods-card">
+            <span class="label">New</span>
+            <!-- /.label --><img
+              src="img/image-121.jpg"
+              alt="image: T-Shirt"
+              class="goods-image"
+            />
+            <h3 class="goods-title">Text T-Shirt</h3>
+            <!-- /.goods-title -->
+            <p class="goods-description">White</p>
+            <!-- /.goods-description -->
+            <span class="goods-price">$59</span>
+            <!-- /.goods-price -->
+          </div>
+          <!-- /.goods-card -->
+        </div>
+        <!-- /.col-3 -->
+        <div class="col-lg-3 col-sm-6">
+          <div class="goods-card">
+            <span class="label">New</span>
+            <!-- /.label --><img
+              src="img/image-122.jpg"
+              alt="image: Striped Long Sleeve Shirt "
+              class="goods-image"
+            />
+            <h3 class="goods-title">Striped Long Sleeve Shirt</h3>
+            <!-- /.goods-title -->
+            <p class="goods-description">Red/Sky Blue</p>
+            <!-- /.goods-description -->
+            <span class="goods-price">$119</span>
+            <!-- /.goods-price -->
+          </div>
+          <!-- /.goods-card -->
+        </div>
+        <!-- /.col-3 -->
+      </div>
+      <!-- /.row -->
+      <!-- /.container -->
+    </div>
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-7 mb-4 mb-xl-0">
+            <nav>
+              <ul class="footer-menu d-sm-flex">
+                <!--d-flex чтоб в одну строку-->
+                <li class="footer-menu-item">
+                  <!--ul.footer-menu>li.footer-menu-item*6>a.footer-menu-link-->
+                  <!--Создаём 6 элементов для верхней строки-->
+                  <a href="#" class="footer-menu-link">Shop</a>
+                </li>
+                <li class="footer-menu-item">
+                  <a href="#" class="footer-menu-link">About Us</a>
+                </li>
+                <li class="footer-menu-item">
+                  <a href="#" class="footer-menu-link">Careers</a>
+                </li>
+                <li class="footer-menu-item">
+                  <a href="#" class="footer-menu-link">FAQ</a>
+                </li>
+                <li class="footer-menu-item">
+                  <a href="#" class="footer-menu-link">Blog</a>
+                </li>
+                <li class="footer-menu-item">
+                  <a href="#" class="footer-menu-link">Contacts</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <!-- /.col-7 -->
+          <div class="col-lg-3 d-flex align-items-center">
+            <!--добавил d-flex aligne-items-center чтоб были по центру(центру чего?)-->
+            <span class="footer-text">Follow Us</span>
+            <!--span.footer-social>a.social-link[href=#]*3-->
+            <span class="footer-social d-inline-flex align-items-center">
+              <!--добавил d-inline-flex aligne-items-center чтобы были в линию и по центру (по центру чего?)-->
+              <a href="#" class="social-link">
+                <img src="img/Facebook.svg" alt="Facebook" />
+              </a>
+              <a href="#" class="social-link">
+                <img src="img/Twitter.svg" alt="Twitter" />
+              </a>
+              <a href="#" class="social-link">
+                <img src="img/Instagram.svg" alt="Instagram" />
+              </a>
+            </span>
+          </div>
+          <!-- /.col-3 -->
+          <div
+            class="col-xl-2 col-lg-3 d-flex justify-content-lg-end mt-4 mt-lg-0"
+          >
+            <!--вот тут ахуеть. для супер больших 2 кол, для больш 3, в конец только для больших, отступить сверху 4 ед., но на больших не отствупать-->
+            <span class="footer-text">© 2019 Universal UI Kit</span>
+          </div>
+          <!-- /.col-2 -->
+        </div>
+        <!-- /.row -->
+        <hr class="footer-line mt-4 mb-4" color="White" size="1" />
+        <!--сделали линию. Присвоили класс. Сделали отступы сверху, снизу. Цвет белый. Размер 1 px-->
+        <div class="row d-flex justify-content-between">
+          <div class="col-lg-4 col-sm-9">
+            <img class="payment-logo" src="img/visa.png" alt="logo: visa" />
+            <img
+              class="payment-logo"
+              src="img/mastercard.png"
+              alt="logo: mastercard"
+            />
+            <img class="payment-logo" src="img/paypal.png" alt="logo: paypal" />
+            <img
+              class="payment-logo"
+              src="img/Bitcoin.png"
+              alt="logo: Bitcoin"
+            />
+          </div>
+          <!-- /.col-4 -->
+          <div class="col-lg-2 col-sm-3 d-flex justify-content-end">
+            <a href="#" class="top-link d-flex align-items-center">
+              <span class="top-link-text">Top</span>
+              <img src="img/TOP.svg" alt="logo: top" />
+            </a>
+          </div>
+          <!-- /.col-2 -->
+        </div>
+      </div>
+      <!-- /.container -->
+    </footer>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <!-- это мы подключили js swiper и наш js-->
+  </body>
+</html>

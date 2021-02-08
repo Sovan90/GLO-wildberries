@@ -1,0 +1,464 @@
+* {
+  box-sizing: border-box;
+}
+/*после этого отступы не увеличивают размер изображения*/
+
+body {
+  margin: 0;
+  font-family: "Lato", sans-serif;
+}
+
+.header {
+  padding: 15px 0;
+}
+
+/*Убрали отступы. По умолчанию 8px с каждой стороны, прописали стиль Lato для всего документа*/
+
+.navigation {
+  list-style: none;
+  /*чтоб не было точек в списке */
+  padding: 0;
+  /**/
+  margin: 0;
+  /*убрали отступы, которые мы не задавали*/
+}
+
+.navigation-link {
+  text-decoration: none;
+  /*чтоб не было подчеркивания*/
+  color: #939699;
+
+  font-style: normal;
+  font-weight: 900;
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+/*скопировал из фигмы*/
+
+.button {
+  padding: 10px 20px;
+  /*отступы*/
+  background: #4592ff;
+  border-radius: 20px;
+  /*скругления и цвет*/
+  border: none;
+  /*отключаем границы кнопки*/
+  color: #fff;
+  /*цвет текста внутри*/
+  font-family: "Lato", sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 14px;
+  line-height: 20px;
+  /*скопировал из фигмы*/
+  display: flex;
+  align-items: center;
+  /*чтобы иконка и текст кнопки выровнялись по центру*/
+  cursor: pointer;
+  /*чтоб рука при наведении*/
+}
+/*Пишем общий стиль для всех кнопок*/
+
+.button-icon,
+.button-price {
+  margin-right: 10px;
+}
+/*Добавил отступ от иконки. Можно задавать свойство сразу нескольким классам через запятую */
+
+.button-icon:last-child {
+  margin-right: 0;
+  margin-left: 10px;
+}
+/*Это мы добавили, чтоб стрелочка не отталкивалась справа, а отталкивалась слева во 2 карточке.
+ласт чайлд - если последняя в коде.
+отступ справа
+отступ слева*/
+
+.slide {
+  min-height: 570px;
+  padding-top: 90px;
+  padding-bottom: 110px;
+}
+/*добавил воздуха сверху и снизу внутри слайда для всех слайдов */
+
+.slide-1 {
+  background: #b4d1e0 url("../img/slide-image-1.png") no-repeat top right 30%;
+}
+/*установили цвет для слайда 1*/
+/*если background-color, то это чисто только про цвет*/
+/*Прикрутили картинку*/
+/*Можно несколько свойств*/
+
+.slide-2 {
+  background: #dbffeb url("../img/slide-image-1.png") no-repeat top right 30%;
+}
+
+.label {
+  background-color: #3dc47e;
+  border-radius: 3px;
+  padding: 5px 12px;
+  color: #fff;
+  font-size: 12px;
+  line-height: 15px;
+}
+/*Свойства из фигмы:
+цвет фона,
+скругление,
+отступ x и y,
+шрифт 12,
+высота строки 15
+*/
+
+.slide-title {
+  color: #262d33;
+  font-size: 55px;
+  line-height: 70px;
+  font-family: "Roboto Slab", serif;
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+/*здесь дополнительно подключали шрифт, остальное из фигмы копировали, смотрели */
+
+.slide-description {
+  font-size: 18px;
+  line-height: 30px;
+  color: #4b5157;
+  max-width: 335px;
+  margin-bottom: 40px;
+}
+/*шрифт 18,
+высота строки 30,
+цвет,
+максимальная ширина (см в фигме, хотя не обязательно),
+отступ снизу 40px*/
+
+.slider {
+  position: relative;
+}
+/*тут непонятно, но объяснять он не стал*/
+.slider-nav {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  transform: translateY(-50%);
+  z-index: 9;
+}
+/*тут непонятно, но объяснять он не стал
+z-index: 9 - Когда пропали кнопки на слайде. Чтобы кнопки появились. Тадааа. Как так. Неясно.
+*/
+
+.slider-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+/*прозрачный фон,
+убрать границы,
+курсор-рука*/
+
+.card {
+  min-height: 370px;
+  border-radius: 10px;
+  /*смотрим отступы в фигме*/
+  padding-top: 60px;
+  padding-left: 46px;
+  /* padding-right: 46px;*/
+  padding-bottom: 80px;
+  /*вот тут не понял*/
+  /*после этого картинка стала больше. Так как в css отступы увеличивают размер элемента. Но мы это поменяем сейчас. Летим в самый верх нашего стиля.*/
+}
+
+.card-1 {
+  background: #e3e3e3 url("../img/card-image-1.jpg") no-repeat top right;
+  background-size: cover;
+
+  /*не понял почему не background-color: ;
+  А цвет скопировали из фигмы. Fill. 
+  top right - приклеиить к верх правому
+  кавер - чтоб размер заполняло
+  радиус - скругление
+  */
+}
+
+.card-title {
+  color: #262d33;
+  font-size: 25px;
+  line-height: 30px;
+  font-family: "Roboto Slab", serif;
+  max-width: 222px;
+  margin: 0;
+}
+/*оформили заголовок 1 карточки.
+цвет
+размер шрифта
+высота строки
+шрифт
+Ограничили размер, для переноса.
+обнулили отступы, да они были. в F12 если посмотреть, они были по 25px.
+*/
+
+.card-text {
+  color: #4b5157;
+  font-size: 14px;
+  line-height: 20px;
+  max-width: 176px;
+  margin-bottom: 25px;
+}
+/*оформили текст в карточке 1.
+цвет
+размер шрифта
+высота строки
+ограничили для переноса.
+Сам шрифт назначать не стал, так как итак для всего body он объявлен тут Lato.
+*/
+
+/*Погнали 2ю карточку*/
+.card-2 {
+  background: #2b2b2b url("../img/card-image-2.jpg") no-repeat top right;
+  background-size: cover;
+}
+
+.text-light {
+  color: #ffffff;
+}
+
+.text-light-2 {
+  color: #ffffff;
+  mix-blend-mode: normal;
+  opacity: 0.85;
+}
+
+/*далее исправляем классы у кнопок, т.к. иконка теперь прилипает к View all. Полетели в классы кнопок*/
+
+/*Погнали 3ю карточку*/
+.card-3 {
+  background: #ccd5e6 url("../img/card-image-3.png") no-repeat top right 10%;
+  background-size: contain;
+  padding-top: 35px;
+}
+/*
+Фон из фигмы.
+Картинка
+не повторять, приклеить к верх прав.
+bs - contain, чтоб не растягивалась а вписалась
+10% - подвинули справа
+*/
+.card-title.large {
+  max-width: 420px;
+  font-size: 40px;
+  line-height: 50px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.card-text.large {
+  max-width: 320px;
+}
+
+.card-price {
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 900;
+}
+
+.card-4 {
+  background: #ff4f52 url("../img/card-image-4.png") no-repeat right;
+  padding-top: 35px;
+  padding-left: 25px;
+  background-size: contain;
+}
+
+.title-4 {
+  font-family: "Roboto Slab", serif;
+  font-size: 26px;
+  line-height: 30px;
+  max-width: 210px;
+}
+
+/*че с этой карточкой 4й делать..." */
+.section-title {
+  font-family: "Roboto Slab", serif;
+  font-size: 25px;
+  line-height: 30px;
+  max-width: 848px;
+  color: #262d33;
+}
+
+.more {
+  text-decoration: none;
+  font-weight: 900;
+  font-size: 14px;
+  line-height: 20px;
+  color: #262d33;
+  padding: 10px;
+}
+/*
+чтоб убрать подчеркивание ссылки.
+жирность
+размер шрифта
+высота строки
+цвеr
+padding - +кликабельность. Расширяет активную область.
+*/
+.goods-card {
+  position: relative;
+  /* border: 1px solid #000; временно. чисто чтоб видеть их*/
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 35px;
+  padding-left: 35px;
+  padding-right: 35px;
+}
+.goods-card .label {
+  position: absolute; /*не знаю что значит*/
+  left: 18px;
+  top: 18px;
+}
+
+.goods-title {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  color: #262d33;
+  font-size: 16px;
+  line-height: 25px;
+  font-family: "Roboto Slab", serif;
+}
+/*наруж. отступ сверху
+наруж. отступ снизу
+цвет
+размер шрифта
+высота строки
+шрифт*/
+
+.goods-description {
+  margin-top: 5px;
+  margin-bottom: 20px;
+  color: #4b5157;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.goods-price {
+  color: #262d33;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 900; /*жирность*/
+}
+
+.footer-menu {
+  list-style-type: none; /*убрать точки списка*/
+  margin: 0;
+  padding: 0;
+}
+/*
+убрали отступы снаружи
+убрали отступы внутри*/
+
+.footer-menu-item:not(:last-child) {
+  margin-right: 40px;
+}
+/*:not(:last-child) - свойства стиля применяются для всего класса, кроме последнего элемента
+*/
+.footer {
+  background: #8f79d4;
+  padding-top: 45px; /*от шоп вверх до края подвала*/
+  padding-bottom: 40px; /*от VISA вниз до края подвала*/
+  color: #fff;
+}
+/*цвет фона. (ПОЧЕМУ НЕ background-color????)
+отступ внутрь сверху
+отступ внутрь снизу
+цвет текста
+*/
+
+.footer-menu-link {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 900;
+  font-size: 14px;
+  line-height: 20px;
+}
+/*цвет ссылок белый
+убрать декорирование(подчеркивание)
+жирность
+размер
+высота строки*/
+
+.footer-social {
+}
+
+.social-link {
+  text-decoration: none;
+  margin-left: 15px;
+}
+/*убрали декорирование
+сделали отступы влево*/
+
+.footer-text {
+  color: #e7d9ff;
+  font-size: 14px;
+  line-height: 20px;
+}
+/*цвет
+размер шрифта
+высота строки*/
+
+.footer-line {
+  opacity: 0.5;
+}
+/*прозрачность линии в футере*/
+
+.top-link {
+  text-decoration: none;
+  color: #fff;
+}
+/*убрали подчеркивание
+цвет белый*/
+
+.top-link-text {
+  margin-right: 15px;
+}
+
+.payment-logo:not(:last-child) {
+  vertical-align: middle; /*хз что даёт*/
+  margin-right: 25px;
+}
+
+@media (max-width: 1200px) {
+  .slide-1 {
+    background-size: cover; /*заполняет всё */
+  }
+  .card-3 {
+    background-size: cover;
+  }
+}
+/*применили собственное правило экранов меньше 1200 px*/
+
+@media (max-width: 992px) {
+  .slider-nav {
+    display: none;
+  }
+}
+/*применили правило, чтоб исчезли кнопки слайдера на экранах меньше 992*/
+
+@media (max-width: 576px) {
+  .slide-title {
+    font-size: 36px;
+    line-height: 1.4;
+    margin-bottom: 0px;
+  }
+  .card {
+    background-position: left top;
+  }
+  .card-4 {
+    background-position: right top;
+  }
+  .card {
+    padding: 30px;
+    min-height: 300px;
+  }
+}
+/*крутили мутили с заголовком слайдов*/
